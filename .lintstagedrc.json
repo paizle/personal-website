@@ -1,0 +1,12 @@
+{
+  "*.js": [
+    "prettier --write",
+    "eslint --config ./.eslintrc-lint-staged.js"
+  ],
+  "*.html": [
+    "eslint",
+    "prettier --write"
+  ],
+  "*.css": "prettier --write",
+  "*.scss": "prettier --write"
+}
