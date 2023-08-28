@@ -1,0 +1,36 @@
+.Work {
+	position: relative;
+	h3 {
+		text-align: center;
+		position: sticky;
+		top: 0;
+		background-color: white;
+		font-size: 24px;
+		line-height: 1;
+		margin: 0;
+	}
+
+	.year {
+		position: sticky;
+		top: 24px;
+		background-color: white;
+		margin: 1em 0;
+		font-weight: bold;
+	}
+
+	.card {
+		display: flex;
+		margin: 1em 0;
+		.title {
+			font-size: 24px;
+		}
+		img {
+			width: 100px;
+			object-fit: contain;
+			background-color: grey;
+		}
+		.content {
+			padding: 0.5em 1em;
+		}
+	}
+}
