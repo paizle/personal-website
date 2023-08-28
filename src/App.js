@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,13 +9,23 @@ import {
 	faCircleHalfStroke,
 } from '@fortawesome/free-solid-svg-icons'
 function App() {
+	const [darkMode, setDarkMode] = useState(
+		window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+	)
+
 	return (
-		<div className="App">
+		<div className={`App ${darkMode ? 'dark-theme' : ''}`}>
 			<header className="app-header">
 				<div className="banner">
 					<h1>Matthew MacPherson</h1>
-					<div>
-						<FontAwesomeIcon icon={faCircleHalfStroke} />
+					<div className="actions">
+						<button
+							className="blank-button"
+							onClick={() => setDarkMode(!darkMode)}
+							title="Toggle Dark Mode"
+						>
+							<FontAwesomeIcon icon={faCircleHalfStroke} />
+						</button>
 					</div>
 				</div>
 				<div className="menu">
