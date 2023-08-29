@@ -1,43 +1,61 @@
 .Menu {
 	position: absolute;
 	display: inline-block;
+
+	display: flex;
+	justify-content: right;
+
 	ul {
+		position: absolute;
+		right: -120px;
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 		display: inline-flex;
 		flex-direction: column;
+		width: 120px;
 		animation-name: menu-unhover;
-		animation-duration: 1s;
+		animation-duration: 666ms;
+
 		li {
 			display: flex;
-			justify-content: center;
+			justify-content: right;
+
 			a {
 				text-decoration: none;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				width: 100%;
+				width: 200%;
 				padding: 1em 2em;
 				&:hover {
 					span:after {
 						content: '';
-						border-bottom: 1px solid navy;
+						border-bottom: 2px solid navy;
+						display: block;
+						width: 100%;
 					}
 				}
 				span {
 					opacity: 0;
+					//opacity: 1;
 					transition: 750ms;
 					&:after {
 						content: '';
-						border-bottom: 1px solid red;
+						border-bottom: 2px solid red;
+						display: block;
+						width: 0%;
+						transition: 200ms;
+						margin: 0 auto;
+						position: relative;
+						left: 1px;
 					}
 				}
 				svg {
 					display: block;
 					font-size: 32px;
 					transform: scale(1);
-					transition: 750ms;
+					transition: 500ms;
 				}
 			}
 		}
@@ -45,7 +63,7 @@
 	&:hover {
 		ul {
 			animation-name: menu-hover;
-			animation-duration: 1s;
+			animation-duration: 666ms;
 			li {
 				a {
 					span {
@@ -56,6 +74,30 @@
 					}
 				}
 			}
+		}
+	}
+
+	@keyframes menu-hover {
+		0% {
+			width: 120px;
+		}
+		50% {
+			width: 360px;
+		}
+		100% {
+			width: 120px;
+		}
+	}
+
+	@keyframes menu-unhover {
+		0% {
+			width: 120px;
+		}
+		50% {
+			width: 360px;
+		}
+		100% {
+			width: 120px;
 		}
 	}
 }

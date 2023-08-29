@@ -23,6 +23,7 @@
 
 	header {
 		position: relative;
+		z-index: 100;
 		grid-area: header;
 		.banner {
 			display: flex;
@@ -43,7 +44,7 @@
 		overflow-x: hidden;
 		& > * {
 			animation-name: animate-view;
-			animation-timing-function: cubic-bezier(0.4, 0.01, 0.53, 1.21);
+			animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 			animation-duration: 666ms;
 		}
 	}
@@ -52,30 +53,6 @@
 @keyframes animate-view {
 	0% {
 		transform: translateX(100%);
-	}
-	100% {
-		transform: translateX(0);
-	}
-}
-
-@keyframes menu-hover {
-	0% {
-		transform: translateX(0);
-	}
-	50% {
-		transform: translateX(-100%);
-	}
-	100% {
-		transform: translateX(0);
-	}
-}
-
-@keyframes menu-unhover {
-	0% {
-		transform: translateX(0);
-	}
-	50% {
-		transform: translateX(-100%);
 	}
 	100% {
 		transform: translateX(0);

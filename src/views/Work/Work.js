@@ -57,7 +57,7 @@ const Work = () => {
 				.map((year, dataIndex) => {
 					const out = (
 						<>
-							{lastYear !== year ? <div className="year">{year}</div> : ''}
+							{lastYear !== year ? <h4 className="year">{year}</h4> : ''}
 							{data[year].map((work, workIndex) => {
 								const out2 =
 									lastCompany !== work.company ? (
