@@ -4,8 +4,9 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 
-import Home from './views/Home'
+import Home from './views/Home/Home'
 import Work from './views/Work/Work'
+import Projects from './views/Projects/Projects'
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
 			{
 				path: '/work',
 				element: <Work />,
+			},
+			{
+				path: '/projects',
+				element: <Projects />,
 			},
 		],
 	},

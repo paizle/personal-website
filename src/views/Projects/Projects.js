@@ -8,7 +8,7 @@ import icsCreativeAgency from '../../resources/images/ics-creative-agency.jpg'
 import tuki from '../../resources/images/tuki.jpg'
 import elandas from '../../resources/images/elandas.jpg'
 
-import './Work.scss'
+import './Projects.scss'
 
 const data = {
 	2023: [
@@ -49,7 +49,7 @@ const data = {
 	],
 }
 
-const Work = () => {
+const Projects = () => {
 	let lastYear, lastCompany
 	return (
 		<div className="Work">
@@ -65,6 +65,7 @@ const Work = () => {
 								const out2 =
 									lastCompany !== work.company ? (
 										<div className="card" key={`{${yearIndex}_${workIndex}`}>
+											<a name={kebabCase(work.company)} />
 											<img src={work.image} />
 											<div className="text">
 												<div className="title">{work.company}</div>
@@ -93,4 +94,4 @@ const Work = () => {
 	)
 }
 
-export default Work
+export default Projects

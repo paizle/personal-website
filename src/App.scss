@@ -40,7 +40,7 @@
 	}
 	main {
 		grid-area: body;
-		padding-left: 120px;
+		padding-left: 7em;
 		overflow-x: hidden;
 		& > * {
 			animation-name: animate-view;
