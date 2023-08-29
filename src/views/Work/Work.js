@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import kebabCase from 'lodash.kebabcase'
+import Card from '../../components/Card/Card'
 
 import verbInteractive from '../../resources/images/verb-interactive.jpg'
 import ironclad from '../../resources/images/ironclad_logo.webp'
@@ -62,25 +63,22 @@ const Work = () => {
 						<>
 							{lastYear !== year ? <h4 className="year">{year}</h4> : ''}
 							{data[year].map((work, workIndex) => {
-								const out2 =
-									lastCompany !== work.company ? (
-										<div className="card" key={`{${yearIndex}_${workIndex}`}>
-											<img src={work.image} />
-											<div className="text">
-												<div className="title">{work.company}</div>
-												<div
-													className="html"
-													dangerouslySetInnerHTML={{ __html: work.content }}
-												/>
-												<div className="links">
-													&rarr;{' '}
-													<Link to={`/projects#${kebabCase(work.company)}`}>projects</Link>
-												</div>
-											</div>
+								const out2 = lastCompany !== work.company && (
+									<Card
+										key={`projects_${yearIndex}_${workIndex}`}
+										title={`${work.position} @ ${work.company}`}
+										imgSrc={work.image}
+									>
+										<div
+											className="html"
+											dangerouslySetInnerHTML={{ __html: work.content }}
+										/>
+										<div className="links">
+											&rarr;{' '}
+											<Link to={`/projects#${kebabCase(work.company)}`}>projects</Link>
 										</div>
-									) : (
-										''
-									)
+									</Card>
+								)
 								lastCompany = work.company
 								return out2
 							})}

@@ -8,6 +8,8 @@ import icsCreativeAgency from '../../resources/images/ics-creative-agency.jpg'
 import tuki from '../../resources/images/tuki.jpg'
 import elandas from '../../resources/images/elandas.jpg'
 
+import Card from '../../components/Card/Card'
+
 import './Projects.scss'
 
 const data = {
@@ -62,26 +64,22 @@ const Projects = () => {
 						<>
 							{lastYear !== year ? <h4 className="year">{year}</h4> : ''}
 							{data[year].map((work, workIndex) => {
-								const out2 =
-									lastCompany !== work.company ? (
-										<div className="card" key={`{${yearIndex}_${workIndex}`}>
-											<a name={kebabCase(work.company)} />
-											<img src={work.image} />
-											<div className="text">
-												<div className="title">{work.company}</div>
-												<div
-													className="html"
-													dangerouslySetInnerHTML={{ __html: work.content }}
-												/>
-												<div className="links">
-													&rarr;{' '}
-													<Link to={`/projects#${kebabCase(work.company)}`}>projects</Link>
-												</div>
-											</div>
+								const out2 = lastCompany !== work.company && (
+									<Card
+										key={`projects_${yearIndex}_${workIndex}`}
+										title={`${work.position} @ ${work.company}`}
+										imgSrc={work.image}
+									>
+										<div
+											className="html"
+											dangerouslySetInnerHTML={{ __html: work.content }}
+										/>
+										<div className="links">
+											&rarr;{' '}
+											<Link to={`/projects#${kebabCase(work.company)}`}>projects</Link>
 										</div>
-									) : (
-										''
-									)
+									</Card>
+								)
 								lastCompany = work.company
 								return out2
 							})}

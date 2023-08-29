@@ -1,0 +1,18 @@
+.Card {
+	display: flex;
+
+	img {
+		width: 100px;
+		object-fit: contain;
+		background-color: grey;
+	}
+
+	.content {
+		.title {
+			font-size: 24px;
+		}
+		.children {
+			padding: 0.5em 1em;
+		}
+	}
+}
