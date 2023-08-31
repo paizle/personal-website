@@ -4,13 +4,13 @@ import './Card.scss'
 
 const Card = ({ imgSrc, title, children }) => {
 	return (
-		<div className="Card">
+		<article className="Card">
 			<img src={imgSrc} alt={title} />
 			<div className="content">
-				<div className="title">{title}</div>
+				<h3 className="title">{title}</h3>
 				<div className="children">{children}</div>
 			</div>
-		</div>
+		</article>
 	)
 }
 

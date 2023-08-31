@@ -1,19 +1,39 @@
+:root {
+	color-scheme: light dark;
+}
+
 .App {
+	--text-color: #585892;
+	--text-highlight-color: #00007e;
+	--background-color: #f9f9f9;
+	--background-highlight-color: #eefbff;
+
+	&.dark-theme {
+		--text-color: #acdbea;
+		--text-highlight-color: #eefbff;
+		--background-color: #303030;
+		--background-highlight-color: #101010;
+	}
+
+	background-color: var(--background-color);
+	color: var(--text-color);
+
 	height: 100vh;
-	color: navy;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		margin: 0;
+		padding: 0;
+		color: var(--text-highlight-color);
+	}
+
 	a,
 	a:active,
 	a:visited {
-		color: navy;
-	}
-	&.dark-theme {
-		background-color: black;
-		color: #c0f0ff;
-		a,
-		a:active,
-		a:visited {
-			color: #c0f0ff;
-		}
+		color: var(--text-color);
 	}
 
 	display: grid;
@@ -40,12 +60,12 @@
 	}
 	main {
 		grid-area: body;
-		padding-left: 7em;
+		padding: 0 7em;
 		overflow-x: hidden;
 		& > * {
 			animation-name: animate-view;
 			animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-			animation-duration: 666ms;
+			animation-duration: 600ms;
 		}
 	}
 }

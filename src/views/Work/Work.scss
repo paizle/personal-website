@@ -1,39 +1,41 @@
 .Work {
 	position: relative;
+
 	h3 {
 		text-align: center;
 		position: sticky;
-		top: 0;
-		background-color: white;
+		top: 0em;
+		background-color: var(--background-color);
 		font-size: 24px;
 		line-height: 1;
 		margin: 0;
+		padding: 1em 0;
 	}
 
 	.year {
 		position: sticky;
-		top: 24px;
-		background-color: white;
+		top: 3em;
+		background-color: var(--background-color);
 		margin: 1em 0;
 		font-weight: bold;
 	}
 
-	.card {
+	.Card {
 		display: flex;
-		margin: 1em 0;
+		flex-direction: row-reverse;
+		padding: 1em;
+		border: 1px solid var(--text-color);
+		border-radius: 0.5em;
+		box-shadow: 5px 5px 8px 1px var(--text-color);
 
 		img {
-			width: 100px;
-			object-fit: contain;
-			background-color: grey;
+			padding: 1em;
+			border: 1px solid var(--text-color);
+			border-radius: 0.5em;
+			box-shadow: 5px 5px 8px 1px var(--text-color);
 		}
-		.text {
-			.title {
-				font-size: 24px;
-			}
-			.html {
-				padding: 0.5em 1em;
-			}
+		.content {
+			flex-grow: 1;
 		}
 	}
 }

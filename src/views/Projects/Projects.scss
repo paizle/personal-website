@@ -1,38 +1,95 @@
 .Projects {
 	position: relative;
-	h3 {
+
+	h2 {
 		text-align: center;
 		position: sticky;
-		top: 0;
-		background-color: white;
-		font-size: 24px;
-		line-height: 1;
+		top: 0em;
+		background-color: var(--background-color);
+		font-size: 1.5em;
+		line-height: 1em;
 		margin: 0;
+		padding: 1em 0;
+	}
+
+	h3 {
+		font-size: 1.25em;
 	}
 
 	.year {
 		position: sticky;
-		top: 24px;
-		background-color: white;
-		margin: 1em 0;
+		z-index: 2;
+		top: 4em;
+		box-shadow: 0 0 0.35em 0.9em var(--background-color);
+		background-color: var(--background-color);
+		margin: 0;
+		line-height: 1em;
 		font-weight: bold;
+		display: inline-block;
 	}
 
-	.card {
-		display: flex;
-		margin: 1em 0;
+	.company {
+		position: sticky;
+		z-index: 1;
+		top: 6em;
+		box-shadow: 0 0 0.35em 0.9em var(--background-color);
+		background-color: var(--background-color);
+		margin: 1em 0 2em 0;
+		padding: 0 1em;
+		line-height: 1em;
+		font-weight: bold;
+		transition: 300ms;
+		display: inline-block;
+		border-radius: 0.5em;
+	}
+
+	hr {
+		border-color: var(--text-highlight-color);
+		margin: 4em auto;
+		width: 66%;
+	}
+
+	Article.Card {
+		margin: 1em 0 1em 1em;
+		align-items: flex-start;
+
+		&:nth-of-type(even) {
+			flex-direction: row-reverse;
+			margin: 1em 0 1em 2em;
+			.content {
+				padding: 0 0 0 0;
+			}
+
+			img {
+				margin: 0 0 0 2em;
+			}
+		}
 
 		img {
-			width: 100px;
-			object-fit: contain;
-			background-color: grey;
+			width: 150px;
+			padding: 1em;
+			margin: 0 1em;
+			border: 1px solid var(--text-highlight-color);
+			border-radius: 0.5em;
+			box-shadow: 2px 2px 12px 1px var(--text-color);
 		}
-		.text {
-			.title {
-				font-size: 24px;
-			}
-			.html {
-				padding: 0.5em 1em;
+		.content {
+			padding: 0 0 0 1em;
+		}
+
+		.technologies {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.7em;
+			align-items: center;
+			.technology {
+				display: flex;
+				align-items: center;
+				border-radius: 1em;
+				padding: 0.3em 0.8em 0.4em 0.8em;
+				background-color: var(--text-highlight-color);
+				color: var(--background-highlight-color);
+				line-height: 1;
 			}
 		}
 	}

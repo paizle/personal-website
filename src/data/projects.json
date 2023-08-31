@@ -1,0 +1,83 @@
+{
+	"2023": {
+		"VERB Interactive": [
+			{
+				"title": "\"Ferries\" Rebuild",
+				"image": "/images/verb-interactive.jpg",
+				"content": "<p>Worked on a re-build of the \"Ferries\" application from the ground up. For this project I worked primarily on the front end building building components, pages, forms and user interfaces for complex data requirements.</p>",
+				"technologies": ["React", "REST", "Tailwind CSS", "JavaScript", "HTML", "SCSS"]
+			}
+		]
+	},
+	"2022": {
+		"VERB Interactive": [
+			{
+				"title": "Asbury Park Hotel",
+				"image": "/images/asbury.jpg",
+				"content": "<p>New build for The Asbury Park Hotel. Implemented many of the UI components on the site. Built the <a href=\"https://www.theasburyhotel.com/things-to-do/events-calendar\" target=\"_blank\">events calendar</a> which has user filters for event types and venues that queries WordPress ACF data and has additional features such as setting events as recurring.</p>",
+				"technologies": ["React", "NextJS", "WordPress", "JavaScript", "HTML", "SCSS"]
+			},
+			{
+				"title": "Cruise Liner Map",
+				"image": "/images/elandas.jpg",
+				"content": "<p>New build for an interactive map project showing cruise liners and destinations on a map of the world. This application allows users to check a cruise liners current position as well as destination information about stops in ports made along the way to it\"s destination.</p>",
+				"technologies": ["React", "Redux", "MapBox", "REST", "JavaScript", "HTML", "SCSS"]
+			}
+		]
+	},
+	"2021": {
+		"VERB Interactive": [
+			{
+				"title": "\"Ferries\"",
+				"image": "/images/elandas.jpg",
+				"content": "<p>Worked on feature improvements and bug fixes for the \"Ferries\" application which is in use by multiple clients. The \"Ferries\" application allows users to find, book and pay for their journey on passenger and vehicle ferries.</p>",
+				"technologies": ["React", "Redux", "REST", "JavaScript", "HTML", "SCSS"]
+			}
+			
+		],
+		"Ironclad Web Technologies": [
+			{
+				"title": "\"Article Comments\"",
+				"image": "/images/comments.jpg",
+				"content": "<p>Created a comments system for AllYourFeeds.com that allows users to comment on articles, up or down vote comments and reply to other comments creating threads. Very similar if not identical to how comments work Reddit.com</p>",
+				"technologies": ["React", "REST", "PHP", "Laravel", "Model View Controller", "Eloquent", "Object Relational Mapping" , "JavaScript", "HTML", "SCSS"]
+			}
+		]
+	},
+	"2020": {
+		"ICS Creative Agency": [
+			{
+				"title": "Eastern Charlotte Waterways - Climate Change Hub",
+				"image": "/images/ecw.jpg",
+				"content": "<p>Website for Eastern Charlotte Waterways - Southwestern New Brunswick Climate Change Hub. I implemented the site based on mockups and photoshop designs from the design team at ICS.</p>",
+				"technologies": ["PHP", "WordPress", "JavaScript", "HTML", "SCSS"]
+			}
+		],
+		"Ironclad Web Technologies": [
+			{
+				"title": "\"Article Comments\"",
+				"image": "/images/elandas.jpg",
+				"content": "<p>Worked on feature improvements and bug fixes</p>",
+				"technologies": ["React", "REST", "PHP", "Laravel", "Model View Controller", "Eloquent", "Object Relational Mapping" , "JavaScript", "HTML", "SCSS"]
+			}
+		]
+	},
+	"2019": {
+		"VERB Interactive": [
+			{
+				"title": "\"Ferries\"",
+				"image": "/images/elandas",
+				"content": "<p>Worked on feature improvements and bug fixes</p>",
+				"technologies": ["React", "Redux", "REST", "JavaScript", "HTML", "SCSS"]
+			}
+		],
+		"Ironclad Web Technologies": [
+			{
+				"title": "\"Article Comments\"",
+				"image": "/images/elandas",
+				"content": "<p>Worked on feature improvements and bug fixes</p>",
+				"technologies": ["React", "REST", "PHP", "Laravel", "Model View Controller", "Eloquent", "Object Relational Mapping" , "JavaScript", "HTML", "SCSS"]
+			}
+		]
+	}
+}

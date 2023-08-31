@@ -4,15 +4,15 @@
 	img {
 		width: 100px;
 		object-fit: contain;
-		background-color: grey;
 	}
 
 	.content {
+		padding: 0.5em 1em;
+		flex-grow: 1;
 		.title {
 			font-size: 24px;
 		}
 		.children {
-			padding: 0.5em 1em;
 		}
 	}
 }

@@ -2,13 +2,13 @@
 	position: absolute;
 	display: flex;
 	justify-content: right;
-
 	ul {
 		position: absolute;
 		right: -7em;
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
+		background: linear-gradient(to right, var(--background-color), transparent);
 
 		display: flex;
 		flex-direction: column;
@@ -20,6 +20,20 @@
 			display: flex;
 			justify-content: right;
 			a {
+				&,
+				&:active,
+				&:visited {
+					color: var(--text-color);
+				}
+				&.selected {
+					color: var(--text-highlight-color);
+					border-color: var(--text-highlight-color);
+					margin-left: 0;
+					&:hover span:after {
+						border-bottom: 2px solid var(--text-highlight-color);
+					}
+				}
+				border-color: var(--text-color);
 				position: relative;
 				text-decoration: none;
 				display: flex;
@@ -31,7 +45,7 @@
 				&:hover {
 					span:after {
 						content: '';
-						border-bottom: 2px solid navy;
+						border-bottom: 2px solid var(--text-color);
 						display: block;
 						width: 100%;
 					}
