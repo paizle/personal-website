@@ -1,41 +1,47 @@
 .Work {
 	position: relative;
 
-	h3 {
+	.page-title {
 		text-align: center;
 		position: sticky;
 		top: 0em;
 		background-color: var(--background-color);
-		font-size: 24px;
-		line-height: 1;
+		font-size: 1.5em;
+		line-height: 1em;
 		margin: 0;
 		padding: 1em 0;
 	}
 
+	h3 {
+		font-size: 1.25em;
+	}
+
 	.year {
 		position: sticky;
-		top: 3em;
+		z-index: 2;
+		top: 4em;
+		box-shadow: 0 0 0.35em 0.9em var(--background-color);
 		background-color: var(--background-color);
-		margin: 1em 0;
+		margin: 0;
+		line-height: 1em;
 		font-weight: bold;
+		display: inline-block;
+	}
+
+	hr {
+		border-color: var(--text-highlight-color);
+		margin: 4em auto;
+		width: 66%;
 	}
 
 	.Card {
 		display: flex;
-		flex-direction: row-reverse;
 		padding: 1em;
-		border: 1px solid var(--text-color);
-		border-radius: 0.5em;
-		box-shadow: 5px 5px 8px 1px var(--text-color);
-
-		img {
-			padding: 1em;
-			border: 1px solid var(--text-color);
-			border-radius: 0.5em;
-			box-shadow: 5px 5px 8px 1px var(--text-color);
-		}
-		.content {
-			flex-grow: 1;
+		margin: 2em 0;
+		.title {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0 0.35em;
 		}
 	}
 }

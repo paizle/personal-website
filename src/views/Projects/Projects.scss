@@ -1,7 +1,7 @@
 .Projects {
 	position: relative;
 
-	h2 {
+	.page-title {
 		text-align: center;
 		position: sticky;
 		top: 0em;
@@ -34,13 +34,14 @@
 		top: 6em;
 		box-shadow: 0 0 0.35em 0.9em var(--background-color);
 		background-color: var(--background-color);
-		margin: 1em 0 2em 0;
+		margin: 1em 0 3em 0;
 		padding: 0 1em;
 		line-height: 1em;
 		font-weight: bold;
-		transition: 300ms;
 		display: inline-block;
 		border-radius: 0.5em;
+
+		text-decoration: underline;
 	}
 
 	hr {
@@ -61,14 +62,6 @@
 			}
 		}
 
-		img {
-			width: 150px;
-			padding: 1em;
-			margin: 0 1em 0 1em;
-			border: 1px solid var(--text-highlight-color);
-			border-radius: 0.5em;
-			box-shadow: 2px 2px 12px 1px var(--text-color);
-		}
 		.content {
 			padding: 0 0 0 1em;
 		}

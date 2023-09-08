@@ -3,6 +3,11 @@ module.exports = {
 		browser: true,
 		es2021: true,
 	},
+	settings: {
+		react: {
+			version: 'detect',
+		},
+	},
 	extends: ['eslint:recommended', 'plugin:react/recommended'],
 	overrides: [
 		{
@@ -12,6 +17,9 @@ module.exports = {
 			files: ['.eslintrc.{js,cjs}'],
 			parserOptions: {
 				sourceType: 'script',
+			},
+			ecmaFeatures: {
+				jsx: true,
 			},
 		},
 	],
@@ -24,5 +32,6 @@ module.exports = {
 		'no-unused-vars': 2,
 		'react/prop-types': 2,
 		'no-debugger': 2,
+		'no-empty': 2,
 	},
 }

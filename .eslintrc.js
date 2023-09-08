@@ -13,6 +13,9 @@ module.exports = {
 			parserOptions: {
 				sourceType: 'script',
 			},
+			ecmaFeatures: {
+				jsx: true,
+			},
 		},
 	],
 	parserOptions: {
@@ -24,5 +27,6 @@ module.exports = {
 		'no-unused-vars': 0,
 		'react/prop-types': 0,
 		'no-debugger': 0,
+		'no-empty': 0,
 	},
 }

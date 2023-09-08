@@ -1,0 +1,42 @@
+{
+	"2023": [
+		{
+			"position": "Frontend Developer",
+			"company": "VERB Interactive",
+			"image": "/images/verb-interactive.jpg",
+			"content": "<p>Created various web sites and web applications using React</p>"
+		}
+	],
+	"2021": [
+		{
+      "position": "Frontend Developer",
+			"company": "Ironclad Web Technologies",
+			"image": "/images/ironclad_logo.webp",
+			"content": "this is a test"
+		}
+	],
+	"2020": [
+		{
+      "position": "Senior Web Developer",
+			"company": "ICS Creative Agency",
+			"image": "/images/ics-creative-agency-logo.jpg",
+			"content": "this is a test"
+		}
+	],
+	"2018": [
+		{
+      "position": "Senior Full Stack Developer",
+			"company": "Correnet",
+			"image": "/images/tuki.jpg",
+			"content": "this is a test"
+		}
+	],
+	"2014": [
+		{
+      "position": "Programmer Analyst",
+			"company": "Elandas",
+			"image": "/images/elandas.jpg",
+			"content": "this is a test"
+		}
+	]
+}

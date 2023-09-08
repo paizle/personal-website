@@ -5,7 +5,7 @@ import './Card.scss'
 const Card = ({ imgSrc, title, children }) => {
 	return (
 		<article className="Card">
-			<img src={imgSrc} alt={title} />
+			<img src={imgSrc} alt={title} className="detail" />
 			<div className="content">
 				<h3 className="title">{title}</h3>
 				<div className="children">{children}</div>

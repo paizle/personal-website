@@ -11,9 +11,6 @@ import './Menu.scss'
 
 export default function Menu() {
 	const location = useLocation()
-
-	console.log(location.pathname)
-
 	return (
 		<nav className="Menu">
 			<ul>

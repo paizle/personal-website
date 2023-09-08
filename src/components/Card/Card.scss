@@ -1,16 +1,22 @@
 .Card {
 	display: flex;
+	margin: 1em 0;
 
 	img {
-		width: 100px;
+		width: 150px;
 		object-fit: contain;
+		padding: 1em;
+		margin: 0 1em 0 1em;
+		border-radius: 0.5em;
+		box-shadow: 2px 2px 12px 1px var(--text-color);
 	}
 
 	.content {
 		padding: 0.5em 1em;
 		flex-grow: 1;
+
 		.title {
-			font-size: 24px;
+			font-size: 1.5em;
 		}
 		.children {
 		}

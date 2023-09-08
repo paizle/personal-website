@@ -2,8 +2,8 @@
 	"2023": {
 		"VERB Interactive": [
 			{
-				"title": "\"Ferries\" Rebuild",
-				"image": "/images/verb-interactive.jpg",
+				"title": "Ferries Rebuild",
+				"image": "/images/ferries.jpg",
 				"content": "<p>Worked on a re-build of the \"Ferries\" application from the ground up. For this project I worked primarily on the front end building building components, pages, forms and user interfaces for complex data requirements.</p>",
 				"technologies": ["React", "REST", "Tailwind CSS", "JavaScript", "HTML", "SCSS"]
 			}
@@ -28,8 +28,8 @@
 	"2021": {
 		"VERB Interactive": [
 			{
-				"title": "\"Ferries\"",
-				"image": "/images/elandas.jpg",
+				"title": "Ferries",
+				"image": "/images/ferries.jpg",
 				"content": "<p>Worked on feature improvements and bug fixes for the \"Ferries\" application which is in use by multiple clients. The \"Ferries\" application allows users to find, book and pay for their journey on passenger and vehicle ferries.</p>",
 				"technologies": ["React", "Redux", "REST", "JavaScript", "HTML", "SCSS"]
 			}
@@ -37,7 +37,7 @@
 		],
 		"Ironclad Web Technologies": [
 			{
-				"title": "\"Article Comments\"",
+				"title": "Article Comments",
 				"image": "/images/comments.jpg",
 				"content": "<p>Created a comments system for AllYourFeeds.com that allows users to comment on articles, up or down vote comments and reply to other comments creating threads. Very similar if not identical to how comments work Reddit.com</p>",
 				"technologies": ["React", "REST", "PHP", "Laravel", "Model View Controller", "Eloquent", "Object Relational Mapping" , "JavaScript", "HTML", "SCSS"]
@@ -48,30 +48,64 @@
 		"ICS Creative Agency": [
 			{
 				"title": "Eastern Charlotte Waterways - Climate Change Hub",
-				"image": "/images/ecw.jpg",
-				"content": "<p>Website for Eastern Charlotte Waterways - Southwestern New Brunswick Climate Change Hub. I implemented the site based on mockups and photoshop designs from the design team at ICS.</p>",
+				"image": "/images/swnbclimate.jpg",
+				"content": "<p><a href=\"https://swnbclimate.ca\" target=\"_blank\">https://swnbclimate.ca</a></p><p>Website for Eastern Charlotte Waterways - Southwestern New Brunswick Climate Change Hub. I implemented the site based on mockups and photoshop designs from the design team at ICS.</p>",
 				"technologies": ["PHP", "WordPress", "JavaScript", "HTML", "SCSS"]
-			}
-		],
-		"Ironclad Web Technologies": [
+			},
 			{
-				"title": "\"Article Comments\"",
-				"image": "/images/elandas.jpg",
-				"content": "<p>Worked on feature improvements and bug fixes</p>",
-				"technologies": ["React", "REST", "PHP", "Laravel", "Model View Controller", "Eloquent", "Object Relational Mapping" , "JavaScript", "HTML", "SCSS"]
+				"title": "Vito's Restauant",
+				"image": "/images/vitos.jpg",
+				"content": "<p><a href=\"https://vitos.ca/\" target=\"_blank\">https://vitos.ca/</a></p><p>Website for Vito's. I implemented the site based on mockups and photoshop designs from the design team at ICS.</p>",
+				"technologies": ["PHP", "WordPress", "JavaScript", "HTML", "SCSS"]
+			},
+			{
+				"title": "Deluxe French Fries",
+				"image": "/images/deluxe-french-fries.jpg",
+				"content": "<p><a href=\"https://www.deluxefrenchfries.com\" target=\"_blank\">https://www.deluxefrenchfries.com</a> Website for Vito's. I implemented the site based on mockups and photoshop designs from the design team at ICS.</p>",
+				"technologies": ["PHP", "WordPress", "JavaScript", "HTML", "SCSS"]
+			},
+			{
+				"title": "Deluxe French Fries",
+				"image": "/images/ecw.jpg",
+				"content": "<p><a href=\"https://www.deluxefrenchfries.com\" target=\"_blank\">https://www.deluxefrenchfries.com</a> Website for Vito's. I implemented the site based on mockups and photoshop designs from the design team at ICS.</p>",
+				"technologies": ["PHP", "WordPress", "JavaScript", "HTML", "SCSS"]
+			},
+			{
+				"title": "Splash - Signature Thai Cuisine",
+				"image": "/images/splash-thai-cuisine.jpg",
+				"content": "<p><a href=\"https://www.splashthaicuisine.com/\" target=\"_blank\">https://www.splashthaicuisine.com/</a> Website for Vito's. I implemented the site based on mockups and photoshop designs from the design team at ICS.</p>",
+				"technologies": ["PHP", "WordPress", "JavaScript", "HTML", "SCSS"]
 			}
 		]
 	},
 	"2019": {
-		"VERB Interactive": [
+		"ICS Creative Agency": [
 			{
-				"title": "\"Ferries\"",
-				"image": "/images/elandas",
+				"title": "Mitchell McConnell Insurance",
+				"image": "/images/mitchell-mcconnel.jpg",
+				"content": "<p><a href=\"https://www.mitchellmcconnell.com\" target=\"_blank\">https://www.mitchellmcconnell.com</a> Website for Splash Thai Cuisine. I implemented the site based on mockups and photoshop designs from the design team at ICS.</p>",
+				"technologies": ["PHP", "WordPress", "JavaScript", "HTML", "SCSS"]
+			},
+			{
+				"title": "ICSCreativeAgency.com",
+				"image": "/images/ics-creative-agency.jpg",
+				"content": "<p><a href=\"https://icscreativeagency.com/\" target=\"_blank\">https://icscreativeagency.com</a> Website for ICS Creative Agency. I implemented new features on the company site.</p>",
+				"technologies": ["HubSpot", "PHP", "WordPress", "JavaScript", "HTML", "SCSS"]
+			}
+		]
+	},
+	"2018": {
+		"Correnet": [
+			{
+				"title": "SAWT - VOIP Cloud Provisioning Software",
+				"image": "/images/sawt.jpg",
 				"content": "<p>Worked on feature improvements and bug fixes</p>",
 				"technologies": ["React", "Redux", "REST", "JavaScript", "HTML", "SCSS"]
 			}
-		],
-		"Ironclad Web Technologies": [
+		]
+	},
+	"2014" : {
+		"Elandas": [
 			{
 				"title": "\"Article Comments\"",
 				"image": "/images/elandas",
