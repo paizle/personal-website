@@ -108,7 +108,7 @@
 		"Elandas": [
 			{
 				"title": "\"Article Comments\"",
-				"image": "/images/elandas",
+				"image": "/images/elandas.jpg",
 				"content": "<p>Worked on feature improvements and bug fixes</p>",
 				"technologies": ["React", "REST", "PHP", "Laravel", "Model View Controller", "Eloquent", "Object Relational Mapping" , "JavaScript", "HTML", "SCSS"]
 			}

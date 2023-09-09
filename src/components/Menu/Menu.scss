@@ -14,7 +14,7 @@
 		flex-direction: column;
 		width: 7em;
 		animation-name: menu-unhover;
-		animation-duration: 666ms;
+		animation-duration: 600ms;
 
 		li {
 			display: flex;
@@ -54,13 +54,13 @@
 					position: absolute;
 					top: 0.6em;
 					opacity: 0;
-					transition: 750ms;
+					transition: opacity 750ms;
 					&:after {
 						content: '';
 						border-bottom: 2px solid transparent;
 						display: block;
 						width: 0%;
-						transition: 200ms;
+						transition: width 200ms;
 						margin: 0 auto;
 						position: relative;
 						left: 1px;
@@ -70,9 +70,11 @@
 					position: relative;
 					top: 0;
 					display: block;
-					font-size: 32px;
+					font-size: 2em;
 					transform: scale(1);
-					transition: 500ms;
+					transition:
+						top 500ms,
+						transform 500ms;
 				}
 			}
 		}
@@ -80,7 +82,7 @@
 	&:hover {
 		ul {
 			animation-name: menu-hover;
-			animation-duration: 666ms;
+			animation-duration: 600ms;
 			li {
 				a {
 					span {

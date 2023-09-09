@@ -53,21 +53,26 @@
 	Article.Card {
 		margin: 1em 0 1em 1em;
 		align-items: flex-start;
+		display: block;
 
-		&:nth-of-type(even) {
-			flex-direction: row-reverse;
-			margin: 1em 0 1em 2em;
-			.content {
-				padding: 0 1em 0 0;
+		.detail-image {
+			float: right;
+			margin-left: 1em;
+			margin-bottom: 1em;
+			margin-right: -1em;
+			position: relative;
+			img {
+				object-fit: cover;
+				object-position: top left;
 			}
 		}
 
 		.content {
-			padding: 0 0 0 1em;
+			padding: 0;
 		}
 
 		.technologies {
-			display: flex;
+			display: inline-flex;
 			flex-wrap: wrap;
 			gap: 0.7em;
 			align-items: center;
