@@ -1,47 +1,37 @@
 import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
 	faHouse,
+	faBuilding,
 	faDiagramProject,
 	faEnvelope,
-	faBuilding,
 } from '@fortawesome/free-solid-svg-icons'
-import { Link, useLocation } from 'react-router-dom'
+import { structure } from '../../routes/routes'
+
 import './Menu.scss'
+
+structure['Home'].icon = faHouse
+structure['Work'].icon = faBuilding
+structure['Projects'].icon = faDiagramProject
+structure['Contact'].icon = faEnvelope
 
 export default function Menu() {
 	const location = useLocation()
 	return (
 		<nav className="Menu">
 			<ul>
-				<li>
-					<Link to="/" className={location.pathname === '/' && 'selected'}>
-						<span>Home</span>
-						<FontAwesomeIcon icon={faHouse} />
-					</Link>
-				</li>
-				<li>
-					<Link to="/work" className={location.pathname === '/work' && 'selected'}>
-						<span>Work</span>
-						<FontAwesomeIcon icon={faBuilding} />
-					</Link>
-				</li>
-				<li>
-					<Link
-						to="/projects"
-						className={location.pathname === '/projects' && 'selected'}
-					>
-						<span>Projects</span>
-						<FontAwesomeIcon icon={faDiagramProject} />
-					</Link>
-				</li>
-
-				<li>
-					<Link to="/contact" className={location.pathname === '/' && 'contact'}>
-						<span>Contact</span>
-						<FontAwesomeIcon icon={faEnvelope} />
-					</Link>
-				</li>
+				{Object.keys(structure).map((title) => (
+					<li key={title}>
+						<Link
+							to={structure[title].path}
+							className={location.pathname === structure[title].path ? 'selected' : ''}
+						>
+							<span>{title}</span>
+							<FontAwesomeIcon icon={structure[title].icon} />
+						</Link>
+					</li>
+				))}
 			</ul>
 		</nav>
 	)

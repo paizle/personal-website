@@ -4,8 +4,14 @@
 			{
 				"title": "Ferries Rebuild",
 				"image": "/images/ferries.jpg",
-				"content": "<p>Worked on a re-build of the \"Ferries\" application from the ground up. For this project I worked primarily on the front end building building components, pages, forms and user interfaces for complex data requirements.</p>",
+				"content": "<p>I collaborated with a team of four developers to completely re-do the \"Ferries\" application, starting from scratch.</p><p>My main focus during this project was front-end development, where I architected and implemented various components, pages, forms, and intricate user interfaces to handle complex data. Several of these user interfaces demanded intricate state management, while others necessitated data filtering and sorting.</p>",
 				"technologies": ["React", "REST", "Tailwind CSS", "JavaScript", "HTML", "SCSS"]
+			},
+			{
+				"title": "Voyages",
+				"image": "/images/ferries.jpg",
+				"content": "<p><a href=\"https://www.voyages.com.au/\" target=\"_blank\">https://www.voyages.com.au</p>",
+				"technologies": ["React", "REST", "JavaScript", "HTML", "SCSS"]
 			}
 		]
 	},
@@ -18,7 +24,7 @@
 				"technologies": ["React", "NextJS", "WordPress", "JavaScript", "HTML", "SCSS"]
 			},
 			{
-				"title": "Cruise Liner Map",
+				"title": "Cruises Map",
 				"image": "/images/elandas.jpg",
 				"content": "<p>New build for an interactive map project showing cruise liners and destinations on a map of the world. This application allows users to check a cruise liners current position as well as destination information about stops in ports made along the way to it\"s destination.</p>",
 				"technologies": ["React", "Redux", "MapBox", "REST", "JavaScript", "HTML", "SCSS"]
@@ -37,7 +43,7 @@
 		],
 		"Ironclad Web Technologies": [
 			{
-				"title": "Article Comments",
+				"title": "Threaded Article Comments",
 				"image": "/images/comments.jpg",
 				"content": "<p>Created a comments system for AllYourFeeds.com that allows users to comment on articles, up or down vote comments and reply to other comments creating threads. Very similar if not identical to how comments work Reddit.com</p>",
 				"technologies": ["React", "REST", "PHP", "Laravel", "Model View Controller", "Eloquent", "Object Relational Mapping" , "JavaScript", "HTML", "SCSS"]

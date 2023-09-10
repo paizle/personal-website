@@ -1,35 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import App from './App'
 import reportWebVitals from './reportWebVitals'
-
-import Home from './views/Home/Home'
-import Work from './views/Work/Work'
-import Projects from './views/Projects/Projects'
-
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import routes from './routes/routes'
 
-const router = createBrowserRouter([
-	{
-		path: '/',
-		element: <App />,
-		children: [
-			{
-				path: '/',
-				element: <Home />,
-			},
-			{
-				path: '/work',
-				element: <Work />,
-			},
-			{
-				path: '/projects',
-				element: <Projects />,
-			},
-		],
-	},
-])
+const router = createBrowserRouter(routes)
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
