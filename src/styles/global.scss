@@ -1,0 +1,29 @@
+@import './mixins.scss';
+
+@keyframes animate-view {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+button {
+	color: var(--background-color);
+	background-color: var(--text-highlight-color);
+	border: 1px solid var(--text-color);
+	border-radius: 0.25em;
+
+	font-family: inherit;
+	font-size: inherit;
+
+	padding: 0.5em 2em;
+	margin: 0 auto;
+	display: block;
+	font-weight: bold;
+}
+
+.blank-button {
+	@include blank-button;
+}

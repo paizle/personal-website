@@ -40,7 +40,6 @@
 		font-weight: bold;
 		display: inline-block;
 		border-radius: 0.5em;
-
 		text-decoration: underline;
 	}
 
@@ -76,6 +75,7 @@
 			flex-wrap: wrap;
 			gap: 0.7em;
 			align-items: center;
+			margin: 1em 0;
 			.technology {
 				display: flex;
 				align-items: center;

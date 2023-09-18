@@ -1,0 +1,61 @@
+.EyebrowInput {
+	display: inline-block;
+	border-width: 1px;
+	border-style: solid;
+	border-color: inherit;
+	font-size: 1em;
+	display: block;
+
+	label {
+		display: inline-block;
+		width: 100%;
+		position: relative;
+		background-color: inherit;
+
+		.label-text {
+			pointer-events: none;
+			position: absolute;
+			top: 0.6em;
+			left: 0.25em;
+			display: flex;
+			align-items: center;
+			font-size: inherit;
+			font-family: inherit;
+			background-color: inherit;
+			padding: 0 0.25em;
+			opacity: 0.5;
+			transition:
+				left 200ms,
+				top 200ms,
+				opacity 200ms,
+				font-size 200ms;
+			line-height: 1;
+		}
+
+		input[type='text'],
+		textarea {
+			appearance: none;
+			color: inherit;
+			background-color: inherit;
+			border: none;
+			padding: 0.5em;
+			font-size: inherit;
+			font-family: inherit;
+			box-sizing: border-box;
+			width: 100%;
+		}
+
+		textarea {
+			resize: vertical;
+		}
+	}
+
+	&.is-raised {
+		.label-text {
+			top: -0.6em;
+			left: 1em;
+			font-size: 0.8em;
+			opacity: 1;
+		}
+	}
+}

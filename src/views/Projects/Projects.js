@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import kebabCase from 'lodash.kebabcase'
 import Card from '../../components/Card/Card'
 import data from '../../data/projects.json'
-import setHighestWidth from '../../util/setHighestWidth'
+import setAllToLongestWidth from '../../util/setHighestWidth'
 import useLocationHash from '../../util/useLocationHash'
 
 import './Projects.scss'
@@ -14,14 +14,13 @@ const Projects = () => {
 	useLocationHash()
 
 	useLayoutEffect(() => {
-		setHighestWidth(Array.from(document.getElementsByClassName('year')))
-		setHighestWidth(Array.from(document.getElementsByClassName('company')))
+		setAllToLongestWidth(Array.from(document.getElementsByClassName('year')))
+		setAllToLongestWidth(Array.from(document.getElementsByClassName('company')))
 	}, [])
 
 	return (
 		<div className="Projects">
 			<h2 className="page-title">Projects</h2>
-
 			{Object.keys(data)
 				.sort((a, b) => parseInt(b) - parseInt(a))
 				.map((year, yearIndex) => {

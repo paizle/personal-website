@@ -1,7 +1,7 @@
 const getWidth = (element) =>
 	element && window.getComputedStyle(element)?.getPropertyValue('width')
 
-const setHighestWidth = (elements) => {
+const setAllToHighestWidth = (elements) => {
 	const largestWidthElement = elements.reduce((prev, curr) => {
 		if (!prev || parseInt(getWidth(curr)) > parseInt(getWidth(prev))) {
 			return curr
@@ -12,4 +12,4 @@ const setHighestWidth = (elements) => {
 	elements.forEach((e) => (e.style.width = largestWidth))
 }
 
-export default setHighestWidth
+export default setAllToHighestWidth

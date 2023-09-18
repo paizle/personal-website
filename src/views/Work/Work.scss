@@ -43,5 +43,18 @@
 			flex-wrap: wrap;
 			gap: 0 0.35em;
 		}
+		blockquote {
+			&:before {
+				content: '\00ab';
+				vertical-align: super;
+			}
+			&:after {
+				content: '\00bb';
+				vertical-align: super;
+			}
+		}
+		.detail-image {
+			margin: 0 1em 0 0;
+		}
 	}
 }

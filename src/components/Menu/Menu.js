@@ -11,13 +11,13 @@ import { structure } from '../../routes/routes'
 
 import './Menu.scss'
 
-structure['Home'].icon = faHouse
-structure['Work'].icon = faBuilding
-structure['Projects'].icon = faDiagramProject
-structure['Contact'].icon = faEnvelope
-
 export default function Menu() {
 	const location = useLocation()
+
+	structure['Home'].icon = faHouse
+	structure['Work'].icon = faBuilding
+	structure['Projects'].icon = faDiagramProject
+	structure['Contact'].icon = faEnvelope
 	return (
 		<nav className="Menu">
 			<ul>

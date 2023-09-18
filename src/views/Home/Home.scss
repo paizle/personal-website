@@ -1,0 +1,24 @@
+.Home {
+	padding-top: 1em;
+
+	h4 {
+		margin: 1em 0;
+	}
+
+	.me {
+		float: right;
+		width: 200px;
+		height: 200px;
+		border-radius: 25%;
+		object-fit: contain;
+	}
+
+	ul {
+		list-style-type: circle;
+		margin: 0;
+		padding: 0;
+		li {
+			margin: 0 0 0 1em;
+		}
+	}
+}
