@@ -13,9 +13,8 @@ function App() {
 	return (
 		<div className={`App ${darkMode ? 'dark-theme' : ''}`}>
 			<Header darkMode={darkMode} setDarkMode={setDarkMode} />
-			<main>
-				<Outlet />
-			</main>
+
+			<Outlet />
 		</div>
 	)
 }

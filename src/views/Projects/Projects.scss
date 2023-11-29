@@ -2,7 +2,7 @@
 	position: relative;
 
 	.page-title {
-		text-align: center;
+		text-align: left;
 		position: sticky;
 		top: 0em;
 		background-color: var(--background-color);
@@ -31,11 +31,11 @@
 	.company {
 		position: sticky;
 		z-index: 1;
-		top: 6em;
+		top: 4em;
 		box-shadow: 0 0 0.35em 0.9em var(--background-color);
 		background-color: var(--background-color);
-		margin: 1em 0 3em 0;
-		padding: 0 1em;
+		margin: 1em 0;
+		padding: 0 1em 0 4em;
 		line-height: 1em;
 		font-weight: bold;
 		display: inline-block;

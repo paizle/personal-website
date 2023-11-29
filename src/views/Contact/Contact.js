@@ -9,7 +9,7 @@ export default function Contact() {
 	}
 
 	return (
-		<div className="Contact">
+		<main className="Contact">
 			<h2 className="page-title">Contact</h2>
 
 			<p>
@@ -25,6 +25,6 @@ export default function Contact() {
 
 				<button type="submit">Contact</button>
 			</form>
-		</div>
+		</main>
 	)
 }

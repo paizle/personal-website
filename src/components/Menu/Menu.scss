@@ -14,7 +14,7 @@
 		flex-direction: column;
 		width: 7em;
 		animation-name: menu-unhover;
-		animation-duration: 600ms;
+		animation-duration: 500ms;
 
 		li {
 			display: flex;
@@ -40,7 +40,7 @@
 				flex-direction: column;
 				align-items: center;
 				width: 100%;
-				padding: 1.5em 2em;
+				padding: 1.5em 0;
 				font-weight: bold;
 				&:hover {
 					span:after {
@@ -82,7 +82,7 @@
 	&:hover {
 		ul {
 			animation-name: menu-hover;
-			animation-duration: 600ms;
+			animation-duration: 500ms;
 			li {
 				a {
 					span {

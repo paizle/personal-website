@@ -4,7 +4,7 @@
 			"position": "Frontend Developer",
 			"company": "VERB Interactive",
 			"image": "/images/verb-interactive.jpg",
-			"content": "<p>During my tenure at VERB Interactive, I thrived in the inclusive and collaborative environment fostered within our teams. I effectively utilized my React expertise to develop visually captivating web software applications and websites, prioritizing seamless user experiences.</p><p>In this role, I reported to my team lead as well as project managers, leveraging their guidance to drive projects forward and work effectively within the scope the project. Additionally, I collaborated closely with designers to align UX functionality with our collective vision.</p><p>My contributions were praised for their clean, easily comprehensible code as well as my commitment to quality and teamwork.</p><blockquote>VERB Interactive provides inspired marketing for the best travel experiences. Our team of 220+ talented marketers focuses on integrated, digitally-led marketing strategies that drive results for cruise lines, ferries, hotels, resorts, and destinations.</blockquote>"
+			"content": "<p>During my tenure at VERB Interactive, I thrived in the inclusive and collaborative environment fostered within our teams. I effectively utilized my React expertise to develop visually captivating web software applications and websites, prioritizing intuitive user experiences.</p><p>In this role, I reported to my team lead as well as project managers, leveraging their guidance to drive projects forward and work effectively within the scope the project. Additionally, I collaborated closely with designers to align UX functionality with our collective vision.</p><blockquote>VERB Interactive provides inspired marketing for the best travel experiences. Our team of 220+ talented marketers focuses on integrated, digitally-led marketing strategies that drive results for cruise lines, ferries, hotels, resorts, and destinations.</blockquote><p>My contributions were praised for their clean, easily comprehensible code as well as my commitment to quality and teamwork.</p>"
 		}
 	],
 	"2021": [
@@ -12,7 +12,7 @@
       "position": "Frontend Developer",
 			"company": "Ironclad Web Technologies",
 			"image": "/images/ironclad.jpg",
-			"content": "this is a test"
+			"content": "<p>In this contract/remote role, I was tasked with a stimulating project: architecting a comments system akin to Reddit, using React and Laravel. My proficiency in the MVC pattern facilitated a seamless transition to Laravel, dovetailing well with my existing interest in learning and working with React as a front end framework.</p><p>Reporting directly to the CTO, I effectively translated their project visions into tangible outcomes within a remote work setup. Leveraging my comprehensive experience as a full stack developer, I consistently delivered projects punctually, maintaining cost-efficiency and requiring minimal supervision.</p>"
 		}
 	],
 	"2020": [
@@ -20,15 +20,15 @@
       "position": "Senior Web Developer",
 			"company": "ICS Creative Agency",
 			"image": "/images/ics-creative-agency-logo.jpg",
-			"content": "this is a test"
+			"content": "<p>During my tenure at ICS Creative Agency, I excelled in crafting visually captivating, high-performance, and responsive websites, precisely tailored to client needs and design directives provided by our creative team.</p><p>My expertise extended to adeptly constructing websites utilizing WordPress, implementing customizations to enhance client accessibility, and utilizing specialized WordPress plugins such as Advanced Custom Fields and Beaver Builder. Additionally, I incorporated features from HubSpot and BigCommerce, customizing solutions based on individual client requirements.</p><p>In this role, I reported directly to the CEO and CTO, absorbing their guidance and vision to deliver the caliber of top-notch websites that exemplify ICS Creative Agency's commitment to client satisfaction and excellence.</p>"
 		}
 	],
 	"2018": [
 		{
       "position": "Senior Full Stack Developer",
 			"company": "Correnet",
-			"image": "/images/tuki.jpg",
-			"content": "this is a test"
+			"image": "/images/correnet.jpg",
+			"content": "<p>During my tenure at Correnet, my primary project was developing a VOIP infrastructure reporting and management system for AT&T and their clientele. This system allows users to efficiently manage VOIP service subscribers, implement individual configurations, facilitate data import/export with other platforms, and generate comprehensive reports and dynamic documentation concerning a company's VOIP infrastructure. From its inception, I took a leading role in the project and was accountable for a substantial portion of the codebase.</p><p>In this pivotal role, I reported directly to the CTO, benefiting from their invaluable guidance encompassing direction, insights, vision, and technical intricacies. Collaborating closely with business analysts within my team and at AT&T, I actively contributed to refining and implementing project requirements.</p><p>My work primarily revolved around Java, Hibernate ORM, jQuery, JavaScript, HTML, and CSS. Leveraging these technologies, I developed highly performant and intuitive full-stack web applications, underscoring my dedication to delivering optimal user experiences.</p>"
 		}
 	],
 	"2014": [
@@ -36,7 +36,7 @@
       "position": "Programmer Analyst",
 			"company": "Elandas",
 			"image": "/images/elandas.jpg",
-			"content": "this is a test"
+			"content": "<p>I started working at Elandas as a student at New Brunswick Community College to complete my mandatory 6 month work term where I gained valuable experience with Java and web development. During my work term, I impressed my bosses and was offered a permanent full-time position once I graduated which I gladly accepted.</p><p>For my work term, I was tasked with developing a \"Report Package\" application for their existing \"Pull-Through Express\" software. The \"Report Package\" allowed users to select from a variety of different reports and specifying individual parameters for each. Once the user had created their \"Report Package\", it could be used to generate monthly or yearly reports as a single PDF document. The UI featured an elegant drag and drop system for selecting and organizing reports.</p><p>During my tenure, I worked on many aspects of Elandas's software which caters to the Life Science industry and marketing. My role at Elandas was unofficially the \"UI Expert\".</p>"
 		}
 	]
 }

@@ -1,16 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import kebabCase from 'lodash.kebabcase'
 import Card from '../../components/Card/Card'
 import data from '../../data/work.json'
 import useLocationHash from '../../util/useLocationHash'
+import { Link } from 'react-router-dom'
 import './Work.scss'
 
 const Work = () => {
 	let lastYear, lastCompany
 	useLocationHash()
 	return (
-		<div className="Work">
+		<main className="Work">
 			<h2 className="page-title">Work</h2>
 
 			{Object.keys(data)
@@ -32,14 +32,17 @@ const Work = () => {
 											}
 											imgSrc={work.image}
 										>
+											<a name={kebabCase(work.company)} />
 											<div
 												className="html"
 												dangerouslySetInnerHTML={{ __html: work.content }}
 											/>
 
 											<div className="links">
-												&rarr;{' '}
-												<Link to={`/projects#${kebabCase(work.company)}`}>projects</Link>
+												&larr;{' '}
+												<Link to={`/projects#${kebabCase(work.company)}`}>
+													See the projects I worked on at {work.company}
+												</Link>
 											</div>
 											<a name={kebabCase(work.company)} />
 										</Card>
@@ -54,7 +57,7 @@ const Work = () => {
 					lastYear = year
 					return out
 				})}
-		</div>
+		</main>
 	)
 }
 

@@ -22,8 +22,23 @@
 		padding: 0.5em 1em;
 		flex-grow: 1;
 
+		a:not([href]) {
+			font-weight: normal;
+		}
+
 		.title {
 			font-size: 1.5em;
+		}
+
+		blockquote {
+			&:before {
+				content: '\00ab';
+				vertical-align: super;
+			}
+			&:after {
+				content: '\00bb';
+				vertical-align: super;
+			}
 		}
 	}
 }

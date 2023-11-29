@@ -2,7 +2,7 @@
 	position: relative;
 
 	.page-title {
-		text-align: center;
+		text-align: left;
 		position: sticky;
 		top: 0em;
 		background-color: var(--background-color);
@@ -19,6 +19,7 @@
 	.year {
 		position: sticky;
 		z-index: 2;
+		left: 0;
 		top: 4em;
 		box-shadow: 0 0 0.35em 0.9em var(--background-color);
 		background-color: var(--background-color);
@@ -35,26 +36,22 @@
 	}
 
 	.Card {
-		display: flex;
 		padding: 1em;
 		margin: 2em 0;
+		display: block;
 		.title {
 			display: flex;
 			flex-wrap: wrap;
 			gap: 0 0.35em;
 		}
-		blockquote {
-			&:before {
-				content: '\00ab';
-				vertical-align: super;
-			}
-			&:after {
-				content: '\00bb';
-				vertical-align: super;
-			}
+		.links {
+			text-align: right;
+			padding: 1em 0;
 		}
+
 		.detail-image {
-			margin: 0 1em 0 0;
+			margin: 1em 1.5em 1em 1em;
+			float: right;
 		}
 	}
 }

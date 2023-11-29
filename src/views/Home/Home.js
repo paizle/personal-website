@@ -5,7 +5,7 @@ import './Home.scss'
 
 export default function Home() {
 	return (
-		<div className="Home">
+		<main className="Home">
 			<h4>Greetings,</h4>
 
 			<img src="/images/matthew-allan-macpherson.jpg" className="me" />
@@ -86,6 +86,6 @@ export default function Home() {
 				<br />
 				Matthew MacPherson
 			</p>
-		</div>
+		</main>
 	)
 }

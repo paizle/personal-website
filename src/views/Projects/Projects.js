@@ -19,7 +19,7 @@ const Projects = () => {
 	}, [])
 
 	return (
-		<div className="Projects">
+		<main className="Projects">
 			<h2 className="page-title">Projects</h2>
 			{Object.keys(data)
 				.sort((a, b) => parseInt(b) - parseInt(a))
@@ -28,7 +28,9 @@ const Projects = () => {
 						<>
 							{lastYear !== year && (
 								<>
-									<h3 className="year">{year}</h3>
+									<span>
+										<h3 className="year">{year}</h3>
+									</span>
 									<div />
 								</>
 							)}
@@ -75,7 +77,7 @@ const Projects = () => {
 					lastYear = year
 					return out
 				})}
-		</div>
+		</main>
 	)
 }
 
