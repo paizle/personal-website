@@ -7,58 +7,71 @@ import { Link } from 'react-router-dom'
 import './Work.scss'
 
 const Work = () => {
-	let lastYear, lastCompany
 	useLocationHash()
+
+	const workEntries = formatWorkData(data)
+
 	return (
-		<main className="Work">
+		<div className="Work timeline">
 			<h2 className="page-title">Work</h2>
 
-			{Object.keys(data)
-				.sort((a, b) => parseInt(b) - parseInt(a))
-				.map((year, yearIndex) => {
-					const out = (
-						<>
-							{lastYear !== year && <h3 className="year">{year}</h3>}
-							{data[year].map((work, workIndex) => {
-								const out2 = lastCompany !== work.company && (
-									<>
-										<Card
-											key={`projects_${yearIndex}_${workIndex}`}
-											title={
-												<>
-													<span>{work.position}</span>
-													<span>@ {work.company}</span>
-												</>
-											}
-											imgSrc={work.image}
-										>
-											<a name={kebabCase(work.company)} />
-											<div
-												className="html"
-												dangerouslySetInnerHTML={{ __html: work.content }}
-											/>
+			{workEntries.map((work, workIndex) => (
+				<React.Fragment key={workIndex}>
+					{work.year && <h3 className="year">{work.year}</h3>}
+					<div className="card-container">
+						<a id={kebabCase(work.company)} className="anchor-position" />
+						<Card
+							title={
+								<>
+									<span>{work.position}</span>
+									<span> @ {work.company}</span>
+								</>
+							}
+							imgSrc={work.image}
+						>
+							<div
+								className="html"
+								dangerouslySetInnerHTML={{ __html: work.content }}
+							/>
 
-											<div className="links">
-												&larr;{' '}
-												<Link to={`/projects#${kebabCase(work.company)}`}>
-													See the projects I worked on at {work.company}
-												</Link>
-											</div>
-											<a name={kebabCase(work.company)} />
-										</Card>
-										<hr />
-									</>
-								)
-								lastCompany = work.company
-								return out2
-							})}
-						</>
-					)
-					lastYear = year
-					return out
-				})}
-		</main>
+							<div className="links">
+								&larr;{' '}
+								<Link to={`/projects#${kebabCase(work.company)}`}>
+									See the projects I worked on at {work.company}
+								</Link>
+							</div>
+							<a name={kebabCase(work.company)} />
+						</Card>
+						<hr />
+					</div>
+				</React.Fragment>
+			))}
+		</div>
 	)
+}
+
+function formatWorkData(data) {
+	const result = []
+	let lastYear = null
+	let lastCompany = null
+	const years = Object.keys(data).sort((a, b) => parseInt(b) - parseInt(a))
+	for (let i = 0; i < years.length; i++) {
+		const year = years[i]
+		for (let j = 0; j < data[year].length; j++) {
+			const entry = data[year][j]
+			if (lastYear !== year) {
+				lastYear = year
+				entry.year = year
+			}
+			if (lastCompany !== entry.company) {
+				lastCompany = entry.company
+			} else {
+				entry.company = ''
+			}
+			result.push(entry)
+		}
+	}
+	return result
 }
 
 export default Work

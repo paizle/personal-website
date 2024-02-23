@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Header from './components/Header/Header'
+import MenuHeader from './components/MenuHeader/MenuHeader'
 
 import { Outlet } from 'react-router-dom'
 
@@ -12,9 +12,10 @@ function App() {
 
 	return (
 		<div className={`App ${darkMode ? 'dark-theme' : ''}`}>
-			<Header darkMode={darkMode} setDarkMode={setDarkMode} />
-
-			<Outlet />
+			<MenuHeader darkMode={darkMode} setDarkMode={setDarkMode} />
+			<main>
+				<Outlet />
+			</main>
 		</div>
 	)
 }

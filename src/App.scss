@@ -4,6 +4,10 @@
 	color-scheme: light dark;
 }
 
+#root {
+	height: 100%;
+}
+
 .App {
 	--text-light-color: #585892;
 	--text-light-highlight-color: #00007e;
@@ -20,6 +24,8 @@
 	--background-color: var(--background-light-color);
 	--background-highlight-color: var(--background-light-highlight-color);
 
+	--header-height: 48px;
+
 	&.dark-theme {
 		--text-color: var(--text-dark-color);
 		--text-highlight-color: var(--text-dark-highlight-color);
@@ -29,8 +35,7 @@
 
 	background-color: var(--background-color);
 	color: var(--text-color);
-
-	height: 100vh;
+	height: 100%;
 
 	h1,
 	h2,
@@ -49,37 +54,98 @@
 		font-weight: bold;
 	}
 
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto 1fr;
-	grid-template-areas: 'header' 'body';
-
-	header {
+	main {
 		position: relative;
-		z-index: 100;
-		grid-area: header;
-		.banner {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			h1 {
-				text-align: center;
-				flex-grow: 1;
-			}
-			.actions {
-				margin: 0 0.5em;
+		display: flex;
+		top: var(--header-height);
+		padding: 0 5em 1em 5em;
+		background-color: inherit;
+		@media screen and (min-width: 1000px) {
+			padding: 0 7em 1em 7em;
+		}
+		@media screen and (max-width: 800px) {
+			padding: 0 1em 1em 1em;
+		}
+	}
+
+	.card-container {
+		position: relative;
+		.anchor-position {
+			pointer-events: none;
+			position: absolute;
+			top: -6rem;
+			display: block;
+
+			@media only screen and (max-width: 800px) {
+				top: -10rem;
 			}
 		}
 	}
-	main {
-		grid-area: body;
-		padding: 0 5em 0 7em;
-		overflow-y: auto;
-		& > * {
-			animation-name: animate-view;
-			animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-			animation-duration: 600ms;
+
+	.timeline {
+		.page-title {
+			position: sticky;
+			top: 2em;
+			z-index: 1;
+			width: 100%;
+			background-color: var(--background-color);
+			box-shadow: 0 0 0.35em 0.25em var(--background-color);
+			font-size: 1.5em;
+			line-height: 1em;
+			margin: 0;
+			padding: 0.25em 0;
 		}
+		.year,
+		.company {
+			position: sticky;
+			position: -webkit-sticky;
+			top: 2em;
+			text-align: left;
+			font-size: 1.5em;
+			line-height: 1em;
+			margin: 0;
+			padding: 0.25em 0;
+			background-color: var(--background-color);
+			box-shadow: 0 0 0.35em 0.25em var(--background-color);
+			white-space: nowrap;
+		}
+		.year {
+			z-index: 2;
+			margin: 1em 0 1em 4.5em;
+		}
+		.company {
+			z-index: 3;
+			margin: 1em 0 2em 7.5em;
+			text-decoration: underline;
+		}
+		@media only screen and (max-width: 800px) {
+			z-index: 5;
+			.page-title,
+			.year,
+			.company {
+				margin: 0;
+				text-align: center;
+				box-sizing: border-box;
+				box-shadow: none;
+			}
+			.page-title {
+				top: 2em;
+			}
+			.year {
+				top: 3.5em;
+				box-shadow: 0 0.25em 0.35em 0.25em var(--background-color);
+			}
+			.company {
+				top: 5em;
+				box-shadow: 0 0.25em 0.35em 0.25em var(--background-color);
+			}
+		}
+	}
+
+	hr {
+		border-color: var(--text-highlight-color);
+		margin: 4em auto;
+		width: 66%;
 	}
 
 	.EyebrowInput {

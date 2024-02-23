@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import './MenuHeader.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
-
 import Menu from '../Menu/Menu'
 
-export default function Header({ darkMode, setDarkMode }) {
+const MenuHeader = ({ darkMode, setDarkMode }) => {
 	return (
-		<header className="app-header">
+		<header className="MenuHeader">
 			<div className="banner">
 				<h1>Matthew MacPherson</h1>
 				<div className="actions">
@@ -29,7 +29,9 @@ export default function Header({ darkMode, setDarkMode }) {
 	)
 }
 
-Header.propTypes = {
+export default MenuHeader
+
+MenuHeader.propTypes = {
 	darkMode: PropTypes.bool.isRequired,
 	setDarkMode: PropTypes.func.isRequired,
 }

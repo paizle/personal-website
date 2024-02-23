@@ -1,0 +1,38 @@
+.MenuHeader {
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+	background-color: var(--background-color);
+	height: var(--header-height);
+
+	.banner {
+		position: relative;
+		display: flex;
+		align-items: center;
+		height: 100%;
+		h1 {
+			text-align: center;
+			flex-grow: 1;
+		}
+		.actions {
+			position: absolute;
+			right: 2rem;
+			margin: 0 0.5em;
+			@media only screen and (max-width: 800px) {
+				right: 1rem;
+			}
+			button {
+				padding: 0;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 800px) {
+		.banner {
+			h1 {
+				margin: 0 1rem;
+				font-size: 1.25em;
+			}
+		}
+	}
+}

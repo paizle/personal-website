@@ -12,26 +12,56 @@ import { structure } from '../../routes/routes'
 import './Menu.scss'
 
 export default function Menu() {
+	const [open, setOpen] = React.useState(false)
+
 	const location = useLocation()
 
-	structure['Home'].icon = faHouse
-	structure['Work'].icon = faBuilding
-	structure['Projects'].icon = faDiagramProject
-	structure['Contact'].icon = faEnvelope
 	return (
-		<nav className="Menu">
+		<nav className={`Menu ${open ? 'open' : ''}`} onClick={() => setOpen(!open)}>
 			<ul>
-				{Object.keys(structure).map((title) => (
-					<li key={title}>
-						<Link
-							to={structure[title].path}
-							className={location.pathname === structure[title].path ? 'selected' : ''}
-						>
-							<span>{title}</span>
-							<FontAwesomeIcon icon={structure[title].icon} />
-						</Link>
-					</li>
-				))}
+				<li
+					className={`home ${
+						location.pathname === structure['Home'].path ? 'selected' : ''
+					}`}
+				>
+					<Link to={structure['Home'].path}>
+						<span>Home</span>
+						<FontAwesomeIcon icon={faHouse} />
+					</Link>
+				</li>
+
+				<li
+					className={`work ${
+						location.pathname === structure['Work'].path ? 'selected' : ''
+					}`}
+				>
+					<Link to={structure['Work'].path}>
+						<span>Work</span>
+						<FontAwesomeIcon icon={faBuilding} />
+					</Link>
+				</li>
+
+				<li
+					className={`projects ${
+						location.pathname === structure['Projects'].path ? 'selected' : ''
+					}`}
+				>
+					<Link to={structure['Projects'].path}>
+						<span>Projects</span>
+						<FontAwesomeIcon icon={faDiagramProject} />
+					</Link>
+				</li>
+
+				<li
+					className={`contact ${
+						location.pathname === structure['Contact'].path ? 'selected' : ''
+					}`}
+				>
+					<Link to={structure['Contact'].path}>
+						<span>Contact</span>
+						<FontAwesomeIcon icon={faEnvelope} />
+					</Link>
+				</li>
 			</ul>
 		</nav>
 	)

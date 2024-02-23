@@ -5,11 +5,11 @@ import './Card.scss'
 const Card = ({ imgSrc, title, children }) => {
 	return (
 		<article className="Card">
-			<div className="detail-image">
-				<img src={imgSrc} alt={title} className="detail" />
-			</div>
 			<div className="content">
 				<h3 className="title">{title}</h3>
+				<div className="detail-image">
+					<img src={imgSrc} alt={title} className="detail" />
+				</div>
 				<div className="children">{children}</div>
 			</div>
 		</article>
@@ -18,7 +18,11 @@ const Card = ({ imgSrc, title, children }) => {
 
 Card.propTypes = {
 	imgSrc: PropTypes.string.isRequired,
-	title: PropTypes.string.isRequired,
+	title: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node,
+		PropTypes.string,
+	]).isRequired,
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node,

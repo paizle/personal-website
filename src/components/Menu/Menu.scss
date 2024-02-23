@@ -1,123 +1,163 @@
 .Menu {
 	position: absolute;
-	display: flex;
-	justify-content: right;
+	top: 0;
 	ul {
-		position: absolute;
-		right: -7em;
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		background: linear-gradient(to right, var(--background-color), transparent);
-
 		display: flex;
+		background: linear-gradient(to right, var(--background-color), transparent);
 		flex-direction: column;
-		width: 7em;
-		animation-name: menu-unhover;
-		animation-duration: 500ms;
-
+		list-style-type: none;
+		margin: 0 0 0 0.5em;
+		padding: 0;
 		li {
 			display: flex;
-			justify-content: right;
+			padding: 0;
+			margin: 0 0 1em 0;
+			text-align: center;
 			a {
+				align-items: center;
+				border-color: var(--text-color);
+				font-weight: 700;
+				padding: 1em 0;
+				position: relative;
+				text-decoration: none;
+				width: 100%;
+
 				&,
 				&:active,
 				&:visited {
 					color: var(--text-color);
+					display: block;
+					margin-top: -0.75rem;
 				}
-				&.selected {
-					color: var(--text-highlight-color);
-					border-color: var(--text-highlight-color);
-					margin-left: 0;
-					&:hover span:after {
-						border-bottom: 2px solid var(--text-highlight-color);
-					}
+				&:hover span:after {
+					content: '';
+					border-bottom: 2px solid var(--text-color);
+					display: block;
+					width: 100%;
 				}
-				border-color: var(--text-color);
-				position: relative;
-				text-decoration: none;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				width: 100%;
-				padding: 1.5em 0;
-				font-weight: bold;
-				&:hover {
-					span:after {
-						content: '';
-						border-bottom: 2px solid var(--text-color);
-						display: block;
-						width: 100%;
-					}
-				}
+
 				span {
-					position: absolute;
-					top: 0.6em;
 					opacity: 0;
-					transition: opacity 750ms;
+					transition: opacity 0.75s;
+					background-color: inherit;
+					display: inline-block;
 					&:after {
-						content: '';
 						border-bottom: 2px solid transparent;
+						content: '';
 						display: block;
-						width: 0%;
-						transition: width 200ms;
+						left: 1px;
 						margin: 0 auto;
 						position: relative;
-						left: 1px;
+						transition: width 0.2s ease-out;
+						width: 0;
 					}
 				}
 				svg {
-					position: relative;
-					top: 0;
 					display: block;
-					font-size: 2em;
+					position: relative;
+					top: 0.25em;
+					transform-origin: 50% 50%;
 					transform: scale(1);
-					transition:
-						top 500ms,
-						transform 500ms;
+					transition: transform 0.2s ease-in-out;
+					fill: var(--text-color);
+					width: 40px;
+					height: 32px;
+					margin: 0 auto;
+				}
+			}
+			&.selected a {
+				border-color: var(--text-highlight-color);
+				color: var(--text-highlight-color);
+				&:hover span:after {
+					border-bottom: 2px solid var(--text-highlight-color);
+				}
+				svg {
+					fill: var(--text-highlight-color);
 				}
 			}
 		}
 	}
-	&:hover {
-		ul {
-			animation-name: menu-hover;
-			animation-duration: 500ms;
-			li {
+
+	@media only screen and (min-width: 1000px) {
+		.Menu {
+			left: 1rem;
+		}
+	}
+
+	@media only screen and (min-width: 801px) {
+		&:hover {
+			ul li {
 				a {
+					svg {
+						transform: scale(0.7);
+						margin-top: 0;
+					}
 					span {
 						opacity: 1;
 					}
-					svg {
-						top: 0.3em;
-						transform: scale(0.7);
-					}
 				}
 			}
 		}
 	}
 
-	@keyframes menu-hover {
-		0% {
-			width: 7em;
+	@media only screen and (max-width: 800px) {
+		z-index: 1;
+		&.open {
+			z-index: 3;
+			ul li {
+				a {
+					svg {
+						transform: scale(0.7);
+						margin-top: 0;
+					}
+					span {
+						opacity: 1;
+					}
+				}
+			}
 		}
-		50% {
-			width: 20em;
+		top: 0.25rem;
+		left: 0.25rem;
+		ul {
+			position: absolute;
+			margin: 0;
+			top: 0;
+			width: 75px;
+			height: 65px;
+			li {
+				pointer-events: none;
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				margin: 0;
+				width: 75px;
+				height: 65px;
+				background-color: var(--background-color);
+				border-radius: 0.5em;
+				transition: top 0.5s ease-in-out;
+				visibility: hidden;
+				&.selected {
+					z-index: 5;
+					visibility: visible;
+				}
+			}
 		}
-		100% {
-			width: 7em;
-		}
-	}
-
-	@keyframes menu-unhover {
-		0% {
-			width: 7em;
-		}
-		50% {
-			width: 20em;
-		}
-		100% {
-			width: 7em;
+		&.open ul li {
+			box-shadow: 2px 2px 12px 1px var(--text-color);
+			pointer-events: all;
+			visibility: visible;
+			&.home {
+				top: 0;
+			}
+			&.work {
+				top: 80px;
+			}
+			&.projects {
+				top: 160px;
+			}
+			&.contact {
+				top: 240px;
+			}
 		}
 	}
 }

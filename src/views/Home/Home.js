@@ -1,21 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { structure } from '../../routes/routes'
 import './Home.scss'
 
 export default function Home() {
 	return (
-		<main className="Home">
+		<div className="Home">
 			<h4>Greetings,</h4>
 
 			<img src="/images/matthew-allan-macpherson.jpg" className="me" />
 
 			<p>
 				I&apos;m Matthew MacPherson, and welcome to my professional portfolio
-				website, where I proudly showcase my extensive experience and skills in the
-				field of full stack development. If you wish to connect with me, please
-				visit my <Link to={structure.path}>contact</Link> page, and I will promptly
-				receive your message via email.
+				website, where I proudly showcase my extensive experience and skills in full
+				stack development.
 			</p>
 
 			<p>Here&apos;s a glimpse of what I bring to the table:</p>
@@ -40,7 +36,8 @@ export default function Home() {
 				<li>
 					I have a strong affinity for front end development, driven by a passion for
 					creating exceptional user experiences. My proficiency extends to crafting
-					user interfaces from designs, with React JS being my preferred library.
+					user interfaces from designs, with React JS being my favorite front end
+					library.
 				</li>
 				<li>
 					JavaScript, HTML, and CSS are second nature to me, and I&apos;m well-versed
@@ -49,7 +46,7 @@ export default function Home() {
 				</li>
 				<li>
 					My toolkit includes various front end technologies such as TypeScript,
-					jQuery, Sass, Tailwind CSS, Bootstrap, and Angular 2.
+					jQuery, Sass, Tailwind CSS, Bootstrap, Angular as well as React.
 				</li>
 			</ul>
 			<h4>Back End Brilliance</h4>
@@ -86,6 +83,6 @@ export default function Home() {
 				<br />
 				Matthew MacPherson
 			</p>
-		</main>
+		</div>
 	)
 }
