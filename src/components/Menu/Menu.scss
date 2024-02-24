@@ -1,3 +1,5 @@
+@import '../../styles/global.scss';
+
 .Menu {
 	position: absolute;
 	top: 0;
@@ -15,7 +17,9 @@
 			text-align: center;
 			a {
 				align-items: center;
-				border-color: var(--text-color);
+
+				border-color: var(--text-highlight-color);
+				color: var(--text-highlight-color);
 				font-weight: 700;
 				padding: 1em 0;
 				position: relative;
@@ -25,13 +29,13 @@
 				&,
 				&:active,
 				&:visited {
-					color: var(--text-color);
+					color: var(--text-highlight-color);
 					display: block;
 					margin-top: -0.75rem;
 				}
 				&:hover span:after {
 					content: '';
-					border-bottom: 2px solid var(--text-color);
+					border-bottom: 2px solid var(--text-highlight-color);
 					display: block;
 					width: 100%;
 				}
@@ -61,30 +65,41 @@
 					transition: transform 0.2s ease-in-out;
 					fill: var(--text-color);
 					width: 40px;
-					height: 32px;
+					height: 40px;
 					margin: 0 auto;
 				}
 			}
 			&.selected a {
-				border-color: var(--text-highlight-color);
-				color: var(--text-highlight-color);
+				&,
+				&:active,
+				&:visited {
+					color: var(--text-color);
+					border-color: var(--text-color);
+					display: block;
+					margin-top: -0.75rem;
+				}
 				&:hover span:after {
-					border-bottom: 2px solid var(--text-highlight-color);
+					border-bottom: 2px solid var(--text-color);
 				}
 				svg {
-					fill: var(--text-highlight-color);
+					fill: var(--text-color);
 				}
 			}
 		}
 	}
 
-	@media only screen and (min-width: 1000px) {
-		.Menu {
-			left: 1rem;
-		}
+	@include mediaQuery('large-up') {
+		left: 1rem;
 	}
 
-	@media only screen and (min-width: 801px) {
+	@include mediaQuery('mobile-down') {
+		z-index: 1;
+		width: 75px;
+		height: 75px;
+		transition: all 0.5s ease-in-out;
+		top: -1.5rem;
+		left: -0.25rem;
+
 		&:hover {
 			ul li {
 				a {
@@ -98,32 +113,11 @@
 				}
 			}
 		}
-	}
 
-	@media only screen and (max-width: 800px) {
-		z-index: 1;
-		&.open {
-			z-index: 3;
-			ul li {
-				a {
-					svg {
-						transform: scale(0.7);
-						margin-top: 0;
-					}
-					span {
-						opacity: 1;
-					}
-				}
-			}
-		}
-		top: 0.25rem;
-		left: 0.25rem;
 		ul {
 			position: absolute;
 			margin: 0;
 			top: 0;
-			width: 75px;
-			height: 65px;
 			li {
 				pointer-events: none;
 				position: absolute;
@@ -142,21 +136,37 @@
 				}
 			}
 		}
-		&.open ul li {
-			box-shadow: 2px 2px 12px 1px var(--text-color);
-			pointer-events: all;
-			visibility: visible;
-			&.home {
-				top: 0;
-			}
-			&.work {
-				top: 80px;
-			}
-			&.projects {
-				top: 160px;
-			}
-			&.contact {
-				top: 240px;
+
+		&.open {
+			z-index: 3;
+			background-color: var(--background-color);
+			height: 240px;
+			top: 0.25rem;
+			ul li {
+				pointer-events: all;
+				visibility: visible;
+				a svg {
+					top: -0.25rem;
+					padding: 0.5rem;
+					border-radius: 50%;
+					transform: scale(0.7);
+					margin-top: 0;
+				}
+				span {
+					opacity: 1;
+				}
+				&.home {
+					top: 0;
+				}
+				&.work {
+					top: 80px;
+				}
+				&.projects {
+					top: 160px;
+				}
+				&.contact {
+					top: 240px;
+				}
 			}
 		}
 	}

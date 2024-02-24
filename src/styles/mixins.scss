@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 @mixin blank-button {
 	appearance: none;
 	border: none;
@@ -6,3 +8,18 @@
 	font-size: inherit;
 	color: inherit;
 }
+
+@mixin mediaQuery($size) {
+	@media only screen and (map.get($MediaSizes, $size)) {
+		@content;
+	}
+}
+
+@mixin media-query {
+	@content;
+}
+
+$MediaSizes: (
+	'mobile-down': 'max-width: 678px',
+	'large-up': 'min-width: 1000px',
+);

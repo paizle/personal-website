@@ -5,7 +5,7 @@ import {
 	faHouse,
 	faBuilding,
 	faDiagramProject,
-	faEnvelope,
+	//faEnvelope,
 } from '@fortawesome/free-solid-svg-icons'
 import { structure } from '../../routes/routes'
 
@@ -49,17 +49,6 @@ export default function Menu() {
 					<Link to={structure['Projects'].path}>
 						<span>Projects</span>
 						<FontAwesomeIcon icon={faDiagramProject} />
-					</Link>
-				</li>
-
-				<li
-					className={`contact ${
-						location.pathname === structure['Contact'].path ? 'selected' : ''
-					}`}
-				>
-					<Link to={structure['Contact'].path}>
-						<span>Contact</span>
-						<FontAwesomeIcon icon={faEnvelope} />
 					</Link>
 				</li>
 			</ul>

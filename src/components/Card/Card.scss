@@ -1,3 +1,5 @@
+@import '../../styles/global.scss';
+
 .Card {
 	margin: 2em 0;
 	padding: 1em 0;
@@ -52,7 +54,7 @@
 		}
 	}
 
-	@media only screen and (max-width: 800px) {
+	@mediaquery ('mobile-down') {
 		.detail-image {
 			float: none;
 			margin: 1em auto;

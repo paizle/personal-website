@@ -60,10 +60,10 @@
 		top: var(--header-height);
 		padding: 0 5em 1em 5em;
 		background-color: inherit;
-		@media screen and (min-width: 1000px) {
+		@include mediaQuery('large-up') {
 			padding: 0 7em 1em 7em;
 		}
-		@media screen and (max-width: 800px) {
+		@include mediaQuery('mobile-down') {
 			padding: 0 1em 1em 1em;
 		}
 	}
@@ -76,7 +76,7 @@
 			top: -6rem;
 			display: block;
 
-			@media only screen and (max-width: 800px) {
+			@include mediaQuery('mobile-down') {
 				top: -10rem;
 			}
 		}
@@ -118,7 +118,7 @@
 			margin: 1em 0 2em 7.5em;
 			text-decoration: underline;
 		}
-		@media only screen and (max-width: 800px) {
+		@include mediaQuery('mobile-down') {
 			z-index: 5;
 			.page-title,
 			.year,
