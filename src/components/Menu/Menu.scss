@@ -3,6 +3,21 @@
 .Menu {
 	position: absolute;
 	top: 0;
+
+	&:hover {
+		ul li {
+			a {
+				svg {
+					transform: scale(0.7);
+					margin-top: 0;
+				}
+				span {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
 	ul {
 		display: flex;
 		background: linear-gradient(to right, var(--background-color), transparent);
@@ -10,6 +25,7 @@
 		list-style-type: none;
 		margin: 0 0 0 0.5em;
 		padding: 0;
+
 		li {
 			display: flex;
 			padding: 0;
@@ -17,7 +33,6 @@
 			text-align: center;
 			a {
 				align-items: center;
-
 				border-color: var(--text-highlight-color);
 				color: var(--text-highlight-color);
 				font-weight: 700;
@@ -29,13 +44,13 @@
 				&,
 				&:active,
 				&:visited {
-					color: var(--text-highlight-color);
+					color: var(--text-color);
 					display: block;
 					margin-top: -0.75rem;
 				}
 				&:hover span:after {
 					content: '';
-					border-bottom: 2px solid var(--text-highlight-color);
+					border-bottom: 2px solid var(--text-color);
 					display: block;
 					width: 100%;
 				}
@@ -63,7 +78,6 @@
 					transform-origin: 50% 50%;
 					transform: scale(1);
 					transition: transform 0.2s ease-in-out;
-					fill: var(--text-color);
 					width: 40px;
 					height: 40px;
 					margin: 0 auto;
@@ -73,13 +87,13 @@
 				&,
 				&:active,
 				&:visited {
-					color: var(--text-color);
-					border-color: var(--text-color);
+					color: var(--text-highlight-color);
+					border-color: var(--text-highlight-color);
 					display: block;
 					margin-top: -0.75rem;
 				}
 				&:hover span:after {
-					border-bottom: 2px solid var(--text-color);
+					border-bottom: 2px solid var(--text-highlight-color);
 				}
 				svg {
 					fill: var(--text-color);
@@ -97,22 +111,8 @@
 		width: 75px;
 		height: 75px;
 		transition: all 0.5s ease-in-out;
-		top: -1.5rem;
+		top: -1.25rem;
 		left: -0.25rem;
-
-		&:hover {
-			ul li {
-				a {
-					svg {
-						transform: scale(0.7);
-						margin-top: 0;
-					}
-					span {
-						opacity: 1;
-					}
-				}
-			}
-		}
 
 		ul {
 			position: absolute;
@@ -141,7 +141,9 @@
 			z-index: 3;
 			background-color: var(--background-color);
 			height: 240px;
-			top: 0.25rem;
+			top: 0;
+			box-shadow: 2px 2px 12px 1px var(--text-color);
+			border-radius: 0.25em;
 			ul li {
 				pointer-events: all;
 				visibility: visible;
