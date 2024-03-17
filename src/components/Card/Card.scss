@@ -7,12 +7,12 @@
 	.detail-image {
 		position: relative;
 		border-radius: 0.5rem;
-		box-shadow: 2px 2px 12px 1px var(--text-color);
+		@include standard-box-shadow;
 		height: 150px;
 		min-width: 150px;
 		width: 150px;
 		float: right;
-		margin: 0 1rem 1rem 1rem;
+		margin: 1rem;
 
 		img {
 			border-radius: 0.5rem;

@@ -9,6 +9,10 @@
 	color: inherit;
 }
 
+@mixin standard-box-shadow {
+	box-shadow: 2px 2px 12px 1px var(--text-color);
+}
+
 @mixin mediaQuery($size) {
 	@media only screen and (map.get($MediaSizes, $size)) {
 		@content;

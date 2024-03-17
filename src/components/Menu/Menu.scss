@@ -111,7 +111,7 @@
 		width: 75px;
 		height: 75px;
 		transition: all 0.5s ease-in-out;
-		top: -1.25rem;
+		top: -1.5rem;
 		left: -0.25rem;
 
 		ul {
@@ -133,6 +133,13 @@
 				&.selected {
 					z-index: 5;
 					visibility: visible;
+					a:hover span:after {
+						content: '';
+						border-bottom-color: transparent;
+					}
+				}
+				a svg {
+					transform: scale(0.7);
 				}
 			}
 		}
@@ -142,7 +149,7 @@
 			background-color: var(--background-color);
 			height: 240px;
 			top: 0;
-			box-shadow: 2px 2px 12px 1px var(--text-color);
+			@include standard-box-shadow;
 			border-radius: 0.25em;
 			ul li {
 				pointer-events: all;
